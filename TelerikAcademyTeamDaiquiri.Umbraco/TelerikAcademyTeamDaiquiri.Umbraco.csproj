@@ -384,6 +384,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.controller.js" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.htm" />
     <Content Include="App_Plugins\ModelsBuilder\modelsbuilder.resource.js" />
@@ -407,6 +408,7 @@
     <Content Include="Config\Lang\sv-SE.user.xml" />
     <Content Include="Config\Lang\zh-CN.user.xml" />
     <Content Include="Content\Assets\css\ct-paper.css" />
+    <Content Include="Content\Assets\css\custom.css" />
     <Content Include="Content\Assets\css\demo.css" />
     <Content Include="Content\Assets\css\examples.css" />
     <Content Include="Content\Assets\js\bootstrap-datepicker.js" />
@@ -431,8 +433,34 @@
     <Content Include="default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="GameContent\spaceship-1001\game.js" />
+    <Content Include="GameContent\spaceship-1001\imgs\asteroid.png" />
+    <Content Include="GameContent\spaceship-1001\imgs\asteroid2.png" />
+    <Content Include="GameContent\spaceship-1001\imgs\asteroid3.png" />
+    <Content Include="GameContent\spaceship-1001\imgs\asteroid4.png" />
+    <Content Include="GameContent\spaceship-1001\imgs\ship1.png" />
+    <Content Include="GameContent\spaceship-1001\imgs\ship2.png" />
+    <Content Include="GameContent\spaceship-1001\imgs\stars.jpg" />
+    <Content Include="GameContent\spaceship-1001\index.html" />
+    <Content Include="GameContent\spaceship-1001\PhysicalBody.js" />
+    <Content Include="GameContent\spaceship-1001\snd_music.mp3" />
+    <Content Include="GameContent\spaceship-1001\sprite.js" />
+    <Content Include="GameContent\spaceship-1001\starfield.js" />
+    <Content Include="GameContent\spaceship-1001\Styles\main-style.css" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="media\1002\fotev.jpg" />
+    <Content Include="media\1002\fotev_thumb.jpg" />
+    <Content Include="media\1003\koserkov.jpg" />
+    <Content Include="media\1003\koserkov_thumb.jpg" />
+    <Content Include="media\1004\kristiqn.jpg" />
+    <Content Include="media\1004\kristiqn_thumb.jpg" />
+    <Content Include="media\1005\sewo.jpg" />
+    <Content Include="media\1005\sewo_thumb.jpg" />
+    <Content Include="media\1006\tara.jpg" />
+    <Content Include="media\1006\tara_thumb.jpg" />
+    <Content Include="media\1007\bojko.jpg" />
+    <Content Include="media\1007\bojko_thumb.jpg" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -471,6 +499,9 @@
     <Content Include="Content\bootstrap3\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap3\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\bootstrap3\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="media\1001\spaceship.zip" />
+    <Content Include="GameContent\spaceship-1001\README.md" />
+    <None Include="Properties\PublishProfiles\teamdaiquiri.ddns.net - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -533,6 +564,9 @@
     <Content Include="Views\Game.cshtml" />
     <Content Include="Views\MacroPartials\GameContent.cshtml" />
     <Content Include="Views\RenderGameContent.cshtml" />
+    <Content Include="Views\GameContentFolder.cshtml" />
+    <Content Include="Views\GameInstance.cshtml" />
+    <Content Include="Views\MetaData.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -544,7 +578,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
-    <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
