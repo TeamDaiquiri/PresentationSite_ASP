@@ -243,3 +243,15 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+
+# Microsoft Fakes
+FakesAssemblies/
+EventSystem.Web/Event/CreateEvent.aspx.designer.cs
+EventSystem.Web/Event/CreateEvent.aspx.designer.cs
+logs
+App_Data
+.vs
+machineKey.config
+smtp.config
+ConnectionStrings.config
+Media
