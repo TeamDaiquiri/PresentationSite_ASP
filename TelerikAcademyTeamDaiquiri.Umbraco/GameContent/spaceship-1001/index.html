@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Telerik Invaders</title>
+    <script src="game.js"></script>
+    <link rel="stylesheet" href="./styles/main-style.css">
+</head>
+
+<body>
+    <div id="starfield"></div>
+    <div id="gamecontainer">
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    <script src="starfield.js"></script>
+    <script>
+        //starfield
+        var container = document.getElementById('starfield');
+        var starfield = new Starfield();
+        starfield.initialise(container);
+        starfield.start();
+    </script>
+</body>
+
+</html>

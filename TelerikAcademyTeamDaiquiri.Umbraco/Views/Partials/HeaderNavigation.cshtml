@@ -1,0 +1,60 @@
+﻿@inherits UmbracoTemplatePage
+@{
+    var selection = CurrentPage.Site().Children.Where("Visible");
+    var root = Umbraco.ContentAtRoot().Where("Visible");
+    // var pageName = String.Empty; // unused
+    //var image = Umbraco.Media(CurrentPage.Site().headerLogo);
+}
+
+
+<div id="navbar-success">
+    <nav class="navbar navbar-ct-success" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="@CurrentPage.Site().Url">@(CurrentPage.Site().GetPropertyValue<string>("siteName"))</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    @*<li class="@(Umbraco.If(CurrentPage.Site().AncestorOrSelf(CurrentPage()), "active", null))"><a href="@CurrentPage.Site().Url">Home</a></li>*@
+                    @foreach (var topLevel in selection)
+                    {
+                        if (topLevel.Where("inHeader == true"))
+                        {
+                            if (topLevel.Children.Where("Visible").Count() > 0
+                                && topLevel.Children.Where("inHeader == true")
+                                    .Count() > 0)
+                            {
+                                <li class="dropdown">
+                                    <a href="@topLevel.Url" class="dropdown-toggle" data-toggle="dropdown">@topLevel.Name <b class="caret"></b></a>
+                                    <ul class="dropdown-menu">
+                                        @foreach (var firstSubLevel in topLevel.Children)
+                                        {
+                                            if (firstSubLevel.Where("inHeader == true"))
+                                            {
+                                                <li class="@(Umbraco.If(firstSubLevel.IsAncestorOrSelf(CurrentPage), "active", null))"><a href="@firstSubLevel.Url">@firstSubLevel.Name</a></li>
+                                            }
+                                        }
+                                    </ul>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="@(Umbraco.If(topLevel.IsAncestorOrSelf(CurrentPage), "active", null))"><a href="@topLevel.Url">@topLevel.Name</a></li>
+                            }
+                        }
+                    }
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+</div><!--  end navbar -->
