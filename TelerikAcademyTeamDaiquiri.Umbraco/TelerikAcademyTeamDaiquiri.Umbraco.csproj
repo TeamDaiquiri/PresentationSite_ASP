@@ -499,6 +499,7 @@
     <Content Include="Content\bootstrap3\fonts\glyphicons-halflings-regular.woff" />
     <Content Include="media\1001\spaceship.zip" />
     <Content Include="GameContent\spaceship-1001\README.md" />
+    <Content Include="Db_Backup\daiquiry.rar" />
     <None Include="Properties\PublishProfiles\teamdaiquiri.ddns.net - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
